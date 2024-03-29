@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function(){
         const offsetTop = targetElement.offsetTop;
         const scrollOptions = {
           top: offsetTop,
-          behavior: "smooth", // Scroll suave
+          behavior: "smooth", 
           duration: 500
         };
         window.scrollTo(scrollOptions);
@@ -20,20 +20,6 @@ document.addEventListener("DOMContentLoaded", function(){
     });
   });
 });
-
-
-  function toggleMenu(){
-  const menuToggle = document.querySelector(".navbar");
-  navbar.classList.toggle("active");
-  };
-
-  const navLinks = document.querySelectorAll(".navbar a");
-  navLinks.forEach(function(link) {
-    link.addEventListener("click", function() {
-      const navbar = document.querySelector(".nav__first nav__second");
-      navbar.classList.remove("active");
-    });
-  });
 
 
 
