@@ -1,5 +1,19 @@
+@use 'header';
 @use 'hero';
+@use 'config';
+@use 'section';
+@use 'variable';
+@use 'footer';
 
+@mixin text($fontSize: 16px){
+    font-size: $fontSize;
+    color:variable.$corTextoFirst;
+}
+
+@mixin title($fontSize: 40px){
+    @include text($fontSize);
+    color: variable.$corTextoSecond;
+}
 @font-face{
     font-family: Avenir;
     src: url(../../assets/fonts/Avenir-Regular.woff2);
@@ -12,35 +26,15 @@
     font-weight: 700;
 }
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
-$corFundo: #f1f3fc;
-$corTextoFirst: silver;
-$corTextoSecond: #f9f9f9;
-$fontFirst: sans-serif, Helvetica, Roboto;
 
 body{
-    background-color: $corFundo;
-    font-family: Avenir, sans-serif;
-
+    background-color: variable.$corFundo;
+    font-family: Helvetica, Neue, Segoe UI,Roboto, Ubuntu, Avenir, sans-serif;
 }
 
-.navbar{
-    background-color: #141414;
-}
-
-@mixin text($fontSize: 16px){
-    font-size: $fontSize;
-    color:$corTextoFirst;
-}
-
-@mixin title($fontSize: 40px){
-    @include text($fontSize);
-    color: $corTextoSecond;
+.title{
+    text-align: center;
 }
 
 .text--large{
@@ -56,7 +50,7 @@ body{
 }
 
 .title--large{
-    @include title(44px)
+    @include title(56px)
 }
 
 .title{
@@ -67,12 +61,3 @@ body{
     @include title(40px);
 }
 
-.link-text{
-    @include text(18px);
-    color: $corTextoSecond;
-    text-decoration: underline;
-}
-
-img{
-    width: 100px
-}

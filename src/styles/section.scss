@@ -1,0 +1,56 @@
+
+.article__first{
+
+    &__artigo__paragrafo{
+        color: #fff;
+        font-size: 24px;
+        padding-top: 16px;
+        margin-top: 16px;
+        text-transform: uppercase;
+
+    }
+    &__small__logo{
+        position: relative;
+        width: 50px;
+        margin-top: 100px;
+        padding-top: 32px;
+    }
+
+    &__name{
+        font-size: 64px;
+        font-style: bold;
+        color: #b5b4b4ea;
+        font-family: fantasy;
+        position: relative;
+        margin-top: 8px;
+        text-transform: capitalize;
+    }
+}
+
+.list__first{
+    padding: 2vw 5.6vw;
+    
+    &__filmes{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 24px;
+        list-style: none;
+
+        @media (max-width: 767px){
+            grid-template-columns: 1fr;
+        }
+
+        @media (min-width: 768px){
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @media (min-width: 1024px){
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+
+        &__img{
+            width: 100%;
+            border-radius: 4px
+        } 
+    }
+}
